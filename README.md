@@ -1,6 +1,12 @@
 # Meal Calories Calculator🥘
 _____________
 This is a calculator where you enter your meal components and it calculates the total nutritional facts.
+____________
+### Tech-Stack:
+*JavaScript
+*HTML
+*CSS
+*API
 
 
 <!---
