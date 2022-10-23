@@ -1,0 +1,121 @@
+
+body {
+  font-size: small;
+  line-height: 1.4;
+  /* display: grid; */
+/* grid-template-columns: 400px 400px 400px; */
+  /* grid-column-start:1;  */
+  /* grid-column-end:4; */
+	background-image: url("food.gif");
+	background-size:cover;
+	
+}
+#all{
+	display:flex;
+	justify-content: space-around;
+}
+#title{
+	color: white;
+	font-size: 80px;
+	text-align:center;
+	
+}
+.enter{
+	color:white;
+	font-size:25px;
+}
+
+
+#meal-facts1, #meal-facts2, #meal-facts3, #meal-facts4{
+	display:none;
+	background-color:white;
+	background-position: 30% 50%;
+}
+#meal-facts4{
+	margin-left:13%;
+}
+
+#food{
+	text-align:left;
+	margin: 20px;
+
+	position:0% 999990%;
+}
+#sweets{
+	margin: 20px;
+
+}
+#drinks{
+	text-align:center;
+	margin: 20px;
+
+
+}
+#click-total{
+	margin-left:23%;
+}
+.total{
+margin-top:10%;
+margin-left:30%;
+}
+.total p{
+	color:white;
+	font-size:25px;
+	position: 50% 70%;
+}
+#description{
+	font-size:15px;
+	color:#CA6908;
+}
+
+
+.meal-facts {
+  border: 1px solid black;
+  margin: 20px;
+  float: left;
+  width: 280px;
+  padding: 10px;
+ 
+
+}
+.meal-facts__title{
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 0 0.5px 0;
+}
+.meal-facts__header {
+  border-bottom: 10px solid black;
+  padding: 0 0 0.5px 0;
+  margin: 0 0 1px 0;
+
+}
+.meal-facts__table {
+  width: 100%;
+}
+
+.meal-facts__table td th{
+    font-weight: normal;
+    text-align: left;
+    padding: 0.5px 0;
+    border-top: 1px solid black;
+    white-space: nowrap;
+  }
+
+  
+  .blank-cell {
+    width: 1rem;
+    border-top: 0;
+  }
+  .thick-row {
+    th,
+    td {
+      border-top-width: 5px;
+    }
+  }
+
+.small-info {
+  font-size: 0.7rem;
+}
+.thick-end {
+  border-bottom: 10px solid black;
+}

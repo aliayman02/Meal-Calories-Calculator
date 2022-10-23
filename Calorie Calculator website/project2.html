@@ -1,0 +1,549 @@
+<html>
+<head>
+	<meta charset="UTF8"></meta>
+	<script src="Project2.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="Project2.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<h1 id="title"> Meal Nutritional Facts Calculator</h1>
+
+<div id="all">
+<div id="food" >
+
+<p style="display:inline" class="enter">Enter Your Food:	</p> <input type="text" id="foodInput" placeholder="Ex:1lb burger and fries">
+<button onclick="calculate_food()">Calculate</button><br><br>
+
+
+<div class="meal-facts" id="meal-facts1">
+  <header class="meal-facts__header">
+    <h1 class="meal-facts__title">Nutrition Facts</h1>
+     <p id="fserving_size_g">Serving Size</p>
+  </header>
+  <table class="meal-facts__table">
+      <tr>
+        <th colspan="3" class="small-info">
+          Amount Per Serving
+        </th>
+      </tr>
+      
+      <tr>
+        <td>
+          <b>Calories</b>
+        </td>
+        <td id="fcalories">
+          ?
+        </td>
+      </tr>
+      
+      <tr class="thick-row">
+      </tr>
+      
+      <tr>
+        <td colspan="4">
+          <b>Total Fat</b>
+        </td>
+        <td id="ffat_total_g" >
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Saturated Fat
+        </th>
+        <td id="ffat_saturated_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+
+        <td>
+        </td>
+      </tr>
+      
+      <tr>
+        <td >
+          <b>Cholesterol</b>
+        </td>
+        <td id="fcholesterol_mg">
+          ?
+        </td>
+      </tr>
+      
+       <tr>
+        <td colspan="2">
+          <b>Potassium</b>
+        </td>
+        <td id="fpotassium_mg">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <b>Sodium</b>       
+        </td>
+        <td id="fsodium_mg">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <b>Total Carbohydrate</b>
+        </td>
+        <td id="fcarbohydrates_total_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Dietary Fiber
+        </th>
+        <td id="ffiber_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Sugars
+        </th>
+        <td id="fsugar_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr class="thick-end">
+        <td colspan="2">
+          <b>Protein</b>
+        </td>
+        <td id="fprotein_g">
+          ?
+        </td>
+      </tr>
+      
+  </table>
+</div>
+
+</div>
+
+
+
+<div id="drinks" >
+
+<p style="display:inline" class="enter">Enter Your Drinks: </p><input type="text" id="drinksInput" placeholder="Ex: Vanilla Milkshake">
+<button onclick="calculate_drink()">Calculate</button><br><br>
+
+
+<div class="meal-facts" id="meal-facts2">
+  <header class="meal-facts__header">
+    <h1 class="meal-facts__title">Nutrition Facts</h1>
+     <p id="dserving_size_g">Serving Size</p>
+  </header>
+  <table class="meal-facts__table">
+      <tr>
+        <th colspan="3" class="small-info">
+          Amount Per Serving
+        </th>
+
+      </tr>
+      
+      <tr>
+        <td>
+          <b>Calories</b>
+        </td>
+        <td id="dcalories">
+          ?
+        </td>
+      </tr>
+      
+      <tr class="thick-row">
+      </tr>
+      
+      <tr>
+        <td colspan="4">
+          <b>Total Fat</b>
+        </td>
+        <td id="dfat_total_g" >
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Saturated Fat
+        </th>
+        <td id="dfat_saturated_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+
+        <td>
+        </td>
+      </tr>
+      
+      <tr>
+        <td >
+          <b>Cholesterol</b>
+        </td>
+        <td id="dcholesterol_mg">
+          ?
+        </td>
+      </tr>
+      
+       <tr>
+        <td colspan="2">
+          <b>Potassium</b>
+        </td>
+        <td id="dpotassium_mg">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <b>Sodium</b>       
+        </td>
+        <td id="dsodium_mg">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <b>Total Carbohydrate</b>
+        </td>
+        <td id="dcarbohydrates_total_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Dietary Fiber
+        </th>
+        <td id="dfiber_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Sugars
+        </th>
+        <td id="dsugar_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr class="thick-end">
+        <td colspan="2">
+          <b>Protein</b>
+        </td>
+        <td id="dprotein_g">
+          ?
+        </td>
+      </tr>
+      
+  </table>
+</div>
+
+</div>
+
+
+<div id="sweets" >
+
+<p style="display:inline" class="enter">Enter Your Dessert: </p><input type="text" id="sweetInput"  placeholder="Ex: Lemon Pie">
+<button onclick="calculate_sweet()">Calculate</button><br><br>
+
+
+<div class="meal-facts"  id="meal-facts3">
+  <header class="meal-facts__header">
+    <h1 class="meal-facts__title">Nutrition Facts</h1>
+     <p id="sserving_size_g">Serving Size</p>
+  </header>
+  <table class="meal-facts__table">
+      <tr>
+        <th colspan="3" class="small-info">
+          Amount Per Serving
+        </th>
+
+      </tr>
+      
+      <tr>
+        <td>
+          <b>Calories</b>
+        </td>
+        <td id="scalories">
+          ?
+        </td>
+      </tr>
+      
+      <tr class="thick-row">
+      </tr>
+      
+      <tr>
+        <td colspan="4">
+          <b>Total Fat</b>
+        </td>
+        <td id="sfat_total_g" >
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Saturated Fat
+        </th>
+        <td id="sfat_saturated_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+
+        <td>
+        </td>
+      </tr>
+      
+      <tr>
+        <td >
+          <b>Cholesterol</b>
+        </td>
+        <td id="scholesterol_mg">
+          ?
+        </td>
+      </tr>
+      
+       <tr>
+        <td colspan="2">
+          <b>Potassium</b>
+        </td>
+        <td id="spotassium_mg">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <b>Sodium</b>       
+        </td>
+        <td id="ssodium_mg">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <b>Total Carbohydrate</b>
+        </td>
+        <td id="scarbohydrates_total_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Dietary Fiber
+        </th>
+        <td id="sfiber_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Sugars
+        </th>
+        <td id="ssugar_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr class="thick-end">
+        <td colspan="2">
+          <b>Protein</b>
+        </td>
+        <td id="sprotein_g">
+          ?
+        </td>
+      </tr>
+      
+  </table>
+</div>
+
+</div>
+
+</div>
+
+<div class="total" >
+
+<p>Press Calculate Total to calculate total meal nutrition facts</p>
+<p id="description"> &nbsp;   &nbsp; &nbsp; &nbsp;--(Write your meal components in the designated fields and calculate each of them first)--</p>
+<button onclick="calculate_total()" id="click-total">Calculate Total</button><br><br>
+
+
+<div class="meal-facts"  id="meal-facts4">
+  <header class="meal-facts__header">
+    <h1 class="meal-facts__title">Nutrition Facts</h1>
+     <p id="serving_size_g">Serving Size</p>
+  </header>
+  <table class="meal-facts__table">
+      <tr>
+        <th colspan="3" class="small-info">
+          Amount Per Serving
+        </th>
+
+      </tr>
+      
+      <tr>
+        <td>
+          <b>Calories</b>
+        </td>
+        <td id="calories">
+          ?
+        </td>
+      </tr>
+      
+      <tr class="thick-row">
+      </tr>
+      
+      <tr>
+        <td colspan="4">
+          <b>Total Fat</b>
+        </td>
+        <td id="fat_total_g" >
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Saturated Fat
+        </th>
+        <td id="fat_saturated_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+
+        <td>
+        </td>
+      </tr>
+      
+      <tr>
+        <td >
+          <b>Cholesterol</b>
+        </td>
+        <td id="cholesterol_mg">
+          ?
+        </td>
+      </tr>
+      
+       <tr>
+        <td colspan="2">
+          <b>Potassium</b>
+        </td>
+        <td id="potassium_mg">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <b>Sodium</b>       
+        </td>
+        <td id="sodium_mg">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan="2">
+          <b>Total Carbohydrate</b>
+        </td>
+        <td id="carbohydrates_total_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Dietary Fiber
+        </th>
+        <td id="fiber_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="blank-cell">
+        </td>
+        <th>
+          Sugars
+        </th>
+        <td id="sugar_g">
+          ?
+        </td>
+      </tr>
+      
+      <tr class="thick-end">
+        <td colspan="2">
+          <b>Protein</b>
+        </td>
+        <td id="protein_g">
+          ?
+        </td>
+      </tr>
+      
+  </table>
+</div>
+
+</div>
+
+
+
+
+
+
+
+</body>
