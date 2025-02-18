@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meal Nutritional Facts Calculator</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="js/main.js" defer></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 id="title">Meal Nutritional Facts Calculator</h1>
+    
+  <div id="all">
+    <!-- Food Section -->
+    <div id="food">
+      <label for="foodInput" class="enter">Enter Your Main Dish:</label>
+      <input type="text" id="foodInput" placeholder="E.g., 1 cup rice, 2 eggs">
+      <button onclick="calculate_food()">Calculate</button>
+      <div class="meal-facts" id="meal-facts1" style="display:none;">
+        <h2>Nutrition Facts (Main Dish)</h2>
+        <p><b>Calories:</b> <span id="fcalories">?</span></p>
+        <p><b>Total Fat:</b> <span id="ffat_total_g">?</span> g</p>
+        <p><b>Saturated Fat:</b> <span id="ffat_saturated_g">?</span> g</p>
+        <p><b>Cholesterol:</b> <span id="fcholesterol_mg">?</span> mg</p>
+        <p><b>Sodium:</b> <span id="fsodium_mg">?</span> mg</p>
+        <p><b>Potassium:</b> <span id="fpotassium_mg">?</span> mg</p>
+        <p><b>Carbohydrates:</b> <span id="fcarbohydrates_total_g">?</span> g</p>
+        <p><b>Fiber:</b> <span id="ffiber_g">?</span> g</p>
+        <p><b>Sugar:</b> <span id="fsugar_g">?</span> g</p>
+        <p><b>Protein:</b> <span id="fprotein_g">?</span> g</p>
+      </div>
+    </div>
+
+    <!-- Drinks Section -->
+    <div id="drinks">
+      <label for="drinksInput" class="enter">Enter Your Drink:</label>
+      <input type="text" id="drinksInput" placeholder="E.g., 1 cup orange juice">
+      <button onclick="calculate_drink()">Calculate</button>
+      <div class="meal-facts" id="meal-facts2" style="display:none;">
+        <h2>Nutrition Facts (Drink)</h2>
+        <p><b>Calories:</b> <span id="dcalories">?</span></p>
+        <p><b>Total Fat:</b> <span id="dfat_total_g">?</span> g</p>
+        <p><b>Saturated Fat:</b> <span id="dfat_saturated_g">?</span> g</p>
+        <p><b>Cholesterol:</b> <span id="dcholesterol_mg">?</span> mg</p>
+        <p><b>Sodium:</b> <span id="dsodium_mg">?</span> mg</p>
+        <p><b>Potassium:</b> <span id="dpotassium_mg">?</span> mg</p>
+        <p><b>Carbohydrates:</b> <span id="dcarbohydrates_total_g">?</span> g</p>
+        <p><b>Fiber:</b> <span id="dfiber_g">?</span> g</p>
+        <p><b>Sugar:</b> <span id="dsugar_g">?</span> g</p>
+        <p><b>Protein:</b> <span id="dprotein_g">?</span> g</p>
+      </div>
+    </div>
+
+    <!-- Sweets Section -->
+    <div id="sweets">
+      <label for="sweetInput" class="enter">Enter Your Dessert:</label>
+      <input type="text" id="sweetInput" placeholder="E.g., 1 slice cake">
+      <button onclick="calculate_sweet()">Calculate</button>
+      <div class="meal-facts" id="meal-facts3" style="display:none;">
+        <h2>Nutrition Facts (Dessert)</h2>
+        <p><b>Calories:</b> <span id="scalories">?</span></p>
+        <p><b>Total Fat:</b> <span id="sfat_total_g">?</span> g</p>
+        <p><b>Saturated Fat:</b> <span id="sfat_saturated_g">?</span> g</p>
+        <p><b>Cholesterol:</b> <span id="scholesterol_mg">?</span> mg</p>
+        <p><b>Sodium:</b> <span id="ssodium_mg">?</span> mg</p>
+        <p><b>Potassium:</b> <span id="spotassium_mg">?</span> mg</p>
+        <p><b>Carbohydrates:</b> <span id="scarbohydrates_total_g">?</span> g</p>
+        <p><b>Fiber:</b> <span id="sfiber_g">?</span> g</p>
+        <p><b>Sugar:</b> <span id="ssugar_g">?</span> g</p>
+        <p><b>Protein:</b> <span id="sprotein_g">?</span> g</p>
+      </div>
+    </div>
+  </div>
+    
+  <!-- Total Calculation Section -->
+  <div class="total">
+    <p>Press Calculate Total to get total meal nutrition facts</p>
+    <button onclick="calculate_total()" id="click-total">Calculate Total</button>
+    <div class="meal-facts" id="meal-facts4" style="display:none;">
+      <h2>Nutrition Facts (Total Meal)</h2>
+      <p><b>Calories:</b> <span id="tcalories">?</span></p>
+      <p><b>Total Fat:</b> <span id="tfat_total_g">?</span> g</p>
+      <p><b>Saturated Fat:</b> <span id="tfat_saturated_g">?</span> g</p>
+      <p><b>Cholesterol:</b> <span id="tcholesterol_mg">?</span> mg</p>
+      <p><b>Sodium:</b> <span id="tsodium_mg">?</span> mg</p>
+      <p><b>Potassium:</b> <span id="tpotassium_mg">?</span> mg</p>
+      <p><b>Carbohydrates:</b> <span id="tcarbohydrates_total_g">?</span> g</p>
+      <p><b>Fiber:</b> <span id="tfiber_g">?</span> g</p>
+      <p><b>Sugar:</b> <span id="tsugar_g">?</span> g</p>
+      <p><b>Protein:</b> <span id="tprotein_g">?</span> g</p>
+    </div>
+  </div>
+</body>
+</html>
