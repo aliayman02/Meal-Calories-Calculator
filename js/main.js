@@ -1,5 +1,4 @@
-const API_ID = "74e2a5b9";
-const API_KEY = "11d308fffd6d0791066a5db18b646b1c";
+
 const API_BASE_URL = "https://trackapi.nutritionix.com/v2/natural/nutrients";
 
 async function fetchNutritionData(query) {
