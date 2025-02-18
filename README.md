@@ -47,9 +47,4 @@ Project2/
 5. Save the file and refresh your browser.  
 
 ## 🛠 Tech Stack  
-- **HTML, CSS, JavaScript**  
-<<<<<<< HEAD
-- **Nutritionix API** (for fetching nutrition data)  
-=======
-- **Nutritionix API** (for fetching nutrition data) 
->>>>>>> 464fd0c (better security)
+- **HTML, CSS, JavaScript** 
