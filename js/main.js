@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+const API_ID = CONFIG.API_ID;
+const API_KEY = CONFIG.API_KEY;
+>>>>>>> 464fd0c (better security)
 
 const API_BASE_URL = "https://trackapi.nutritionix.com/v2/natural/nutrients";
 
