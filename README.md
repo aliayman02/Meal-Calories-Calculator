@@ -5,7 +5,6 @@ A simple web-based application that calculates **calories and nutrition facts** 
 ✔️ Enter a **main dish, drink, and dessert** to get detailed nutritional facts  
 ✔️ View **calories, fat, protein, sugar, and more** for each item  
 ✔️ **Calculate total** meal nutrition in one click  
-✔️ Clean and **interactive UI**  
 
 ## 📂 Folder Structure  
 ```
@@ -30,6 +29,6 @@ Project2/
 2. Open `index.html` in your **browser**  
 3. Enter food items and click **"Calculate"**  
 
-## 🛠 Technologies Used  
+## 🛠 Tech Stack  
 - **HTML, CSS, JavaScript**  
 - **Nutritionix API** (for fetching nutrition data)  
